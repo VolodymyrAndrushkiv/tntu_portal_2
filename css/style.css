@@ -1,0 +1,606 @@
+body {
+    background: #ecf0f1;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main_block{
+    height: 80vh;
+    /* width: 80%; */
+    width: 1200px;
+    margin-top: 5%;
+    /* margin-left: 10%; */
+    margin: 10vh auto;
+    background: #fff;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: .3s linear;
+}
+
+.sub_block{
+    width: 50%;
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    height: 70%;
+    transition: .3s linear;
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub_block h1{
+    margin-bottom: 50px;
+}
+
+.enter{
+    width: 250px;
+    height: 60px;
+    background: #E6E6E6;
+    border: none;
+    border-radius: 50px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    transition: .3s linear;
+    font-weight: bold;
+}
+
+/* .enter:focus{
+    outline: none;
+    box-shadow: 0px 0px 15px 0px rgba(52, 73, 94,1.0);
+} */
+
+#enter_role{
+    width: 320px;
+    height: 60px;
+    background: #E6E6E6;
+    border: none;
+    border-radius: 50px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    transition: .3s linear;
+    appearance: none;
+    font-weight: bold;
+}
+
+#enter_role:focus, .enter:focus{
+    outline: none;
+    box-shadow: 0px 0px 15px 0px rgba(52, 73, 94,1.0);
+    /* border-end-start-radius: 0;
+    border-end-end-radius: 0; */
+}
+
+/* input{
+    border-width: none;
+    border-style: none;
+    border-color: none;
+} */
+
+/* .enter:focus i.fas{
+    color: red;
+} */
+
+form div i.fas{
+    width: 50px;
+    height: 30px;
+    line-height: 60px;
+    text-align: center;
+    margin-right: -50px;
+    position: relative;
+    z-index: 1;
+    float: left;
+}
+
+form div i.fas + input {
+    padding-left: 50px;
+}
+
+form div i.fas + #enter_role {
+    padding-left: 50px;
+}
+
+#subm {
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: .2s linear;
+    margin-top: 30px;
+    background: #E6E6E6;
+}
+
+.subm_reg{
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: .2s linear;
+    background: #E6E6E6;
+    margin-top: 10px;
+}
+
+#subm:focus{
+    outline: none;
+}
+
+#subm:hover{
+    background: #34495e;
+    color: #fff;
+}
+
+.subm_reg:hover{
+    background: #34495e;
+    color: #fff;
+}
+
+.subm_reg:focus{
+    outline: none;
+}
+
+/* .enter {
+    font-weight: bold;
+} */
+
+#registration_tip, #login_tip{
+    position: relative;
+    top: 80px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #3f3f3f;
+}
+
+#login_tip{
+    top: 10px;
+}
+
+#registration_tip::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    margin-top: 3px;
+    background: #34495e;
+    transition: .4s;
+}
+
+#login_tip::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    margin-top: 3px;
+    background: #34495e;
+    transition: .4s;
+}
+
+#registration_tip:hover:after{
+    width: 100%;
+}
+
+#login_tip:hover:after{
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#reg_header{
+    margin-bottom: 25px;
+}
+
+.enter_reg{
+    margin-bottom: 10px;
+}
+
+.msg_success, .msg_error, .msg_notification {
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    border-radius: 0 0 10px 10px;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    font-weight: bold;
+}
+
+.msg_success{
+    background: #2ecc71;
+    color: #fff;
+}
+
+.msg_error {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.msg_notification {
+    background: #2c3e50;
+    color: #fff;;
+}
+
+/* Pages */
+
+.main_panel{
+    height: 80vh;
+    width: 1200px;
+    margin-top: 5%;
+    margin: 10vh auto;
+    background: #fff;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: .3s linear;
+    justify-content: center;
+}
+
+.panel_container{
+    /* border: 1px solid #000; */
+    /* height: 40%; */
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel_btn{
+    height: 180px;
+    width: 180px;
+    padding: 10px;
+    margin: 15px 30px;
+    background: tomato;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: .1s linear;
+}
+
+.panel_btn:hover{
+    transform: translateY(-10px);
+}
+
+/* 
+    Перегляд журналу                                s p i           in proccess
+    Редагування журналу                             s   i           in proccess
+    Розрахунок обрання предмету за вибором          s p i
+    Перегляд програми спеціальності                 s p i
+
+    Перегляд силабусів дисциплін                        i
+    Розрахунок вартості навчання                        i
+
+    Перехід у Atutor                                s p             done
+    Вихід                                           s p i           done
+*/
+
+.turq{
+    background: #1abc9c;
+}
+
+.green {
+    background: #2ecc71;
+}
+
+.blue {
+    background: #3498db;
+}
+
+.violet {
+    background: #9b59b6;
+}
+
+.asphalt {
+    background: #34495e;
+}
+
+.yellow {
+    background: #f1c40f;
+}
+
+.orange {
+    background: #e67e22;
+}
+
+.red {
+    background: #e74c3c;
+}
+
+.grey {
+    background: #95a5a6;
+}
+
+
+/* Edit journal */
+
+.edit_panel {
+    min-height: 200px;
+    width: 1040px;
+    margin-top: 5%;
+    margin: 10vh auto;
+    background: #fff;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: .3s linear;
+    /* justify-content: center; */
+    padding: 50px 50px;
+}
+
+.edit_journal_select_item {
+    border: 2px solid silver;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit_journal_select_item a {
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: .2s linear;
+    background: #E6E6E6;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    color: #000;
+
+    /* border: 1px solid #000; */
+}
+
+.task_item_btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: .2s linear;
+    background: #E6E6E6;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    color: #000;
+}
+
+.task_item_btn:hover{
+    background: #34495e;
+    color: #fff;
+}
+
+.edit_journal_select_item a:hover {
+    background: #34495e;
+    color: #fff;
+}
+
+#add_form{
+    /* border: 1px solid #000; */
+    padding-bottom: 10px;
+}
+
+.enter_journal{
+    width: 250px;
+    height: 40px;
+    background: #E6E6E6;
+    border: none;
+    border-radius: 50px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    transition: .3s linear;
+    font-weight: bold;
+    margin: 0;
+}
+
+.enter_journal:focus{
+    outline: none;
+    box-shadow: 0px 0px 15px 0px rgba(52, 73, 94,1.0);
+}
+
+#subm_journal{
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    /* font-size: 1em; */
+    transition: .2s linear;
+    margin-top: 30px;
+    background: #E6E6E6;
+    margin: 0;
+}
+
+#subm_journal:focus{
+    outline: none;
+}
+
+#subm_journal:hover{
+    background: #34495e;
+    color: #fff;
+}
+
+.task_item {
+    background: #E6E6E6;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+#add_form_add_task, #add_form_edit_task {
+    padding: 10px 15px;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+#add_form_add_task input, #add_form_edit_task input{
+    display: block;
+}
+
+#add_form_add_task input[type=submit], #add_form_edit_task input[type=submit]{
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: .2s linear;
+    background: #E6E6E6;
+    margin-bottom: 30px;
+}
+
+#add_form_add_task input[type=submit]:focus, #add_form_edit_task input[type=submit]:focus{
+    outline: none;
+}
+
+#add_form_add_task input[type=submit]:hover, #add_form_edit_task input[type=submit]:hover{
+    background: #34495e;
+    color: #fff;
+}
+
+#add_form_add_task p, #add_form_edit_task p {
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+#add_form_edit_task select {
+    width: 290px;
+    height: 60px;
+    background: #E6E6E6;
+    border: none;
+    border-radius: 50px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    transition: .3s linear;
+    appearance: none;
+    font-weight: bold;
+}
+
+#add_form_edit_task select:focus {
+    outline: none;
+    box-shadow: 0px 0px 15px 0px rgba(52, 73, 94,1.0);
+}
+
+
+
+
+
+
+@media (max-width: 1300px) {
+    .main_block{
+        width: 1000px;
+    }
+    #logo {
+        height: 60%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .main_block{
+        width: 800px;
+    }
+    #logo {
+        height: 45%;
+    }
+    .enter{
+        width: 200px;
+        height: 60px;
+    }
+    #subm {
+        width: 130px;
+    }
+    .subm_reg{
+        width: 130px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 850px) {
+    .main_block{
+        width: 600px;
+        justify-content: center;
+    }
+    .sub_block:first-child{
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .main_block{
+        width: 400px;
+    }
+}
+
+@media (min-height: 1000px) {
+    #logo {
+        height: 60%;
+    }
+}
+
+@media (min-height: 1100px) {
+    #logo {
+        height: 50%;
+    }
+}
+
+/* @media (min-height: 1200px) {
+    #logo {
+        height: 40%;
+    }
+} */
+
+@media (min-height: 1200px) {
+    #logo {
+        height: 30%;
+    }
+}
+
+@media (max-height: 700px){
+    .sub_block:first-child{
+        display: none;
+    }
+    .main_block{
+        width: 600px;
+        /* width: 100%; */
+        justify-content: center;
+    }
+    #registration_tip, #login_tip {
+        top: 10px;
+    }
+}
