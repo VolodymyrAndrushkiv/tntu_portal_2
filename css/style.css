@@ -6,12 +6,43 @@ body {
     box-sizing: border-box;
 }
 
+/* btns back, to_main */
+
+.back, .to_main {
+    display: block;
+    height: 50px;
+    width: 120px;
+    background: #34495e;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s linear;
+}
+
+.back:hover, .to_main:hover {
+    background: #2c3e50;
+}
+
+.back {
+    top: 10px;
+    left: 10px;
+}
+
+.to_main {
+    top: 70px;
+    left: 10px;
+}
+
+/* btns back, to_main */
+
 .main_block{
     height: 80vh;
-    /* width: 80%; */
     width: 1200px;
     margin-top: 5%;
-    /* margin-left: 10%; */
     margin: 10vh auto;
     background: #fff;
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
@@ -24,7 +55,6 @@ body {
 
 .sub_block{
     width: 50%;
-    /* border: 1px solid #000; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,11 +89,6 @@ body {
     font-weight: bold;
 }
 
-/* .enter:focus{
-    outline: none;
-    box-shadow: 0px 0px 15px 0px rgba(52, 73, 94,1.0);
-} */
-
 #enter_role{
     width: 320px;
     height: 60px;
@@ -80,19 +105,7 @@ body {
 #enter_role:focus, .enter:focus{
     outline: none;
     box-shadow: 0px 0px 15px 0px rgba(52, 73, 94,1.0);
-    /* border-end-start-radius: 0;
-    border-end-end-radius: 0; */
 }
-
-/* input{
-    border-width: none;
-    border-style: none;
-    border-color: none;
-} */
-
-/* .enter:focus i.fas{
-    color: red;
-} */
 
 form div i.fas{
     width: 50px;
@@ -154,10 +167,6 @@ form div i.fas + #enter_role {
 .subm_reg:focus{
     outline: none;
 }
-
-/* .enter {
-    font-weight: bold;
-} */
 
 #registration_tip, #login_tip{
     position: relative;
@@ -261,8 +270,6 @@ form div i.fas + #enter_role {
 }
 
 .panel_container{
-    /* border: 1px solid #000; */
-    /* height: 40%; */
     height: 260px;
     display: flex;
     justify-content: center;
@@ -290,19 +297,6 @@ form div i.fas + #enter_role {
 .panel_btn:hover{
     transform: translateY(-10px);
 }
-
-/* 
-    Перегляд журналу                                s p i           in proccess
-    Редагування журналу                             s   i           in proccess
-    Розрахунок обрання предмету за вибором          s p i
-    Перегляд програми спеціальності                 s p i
-
-    Перегляд силабусів дисциплін                        i
-    Розрахунок вартості навчання                        i
-
-    Перехід у Atutor                                s p             done
-    Вихід                                           s p i           done
-*/
 
 .turq{
     background: #1abc9c;
@@ -354,11 +348,11 @@ form div i.fas + #enter_role {
     display: flex;
     flex-direction: column;
     transition: .3s linear;
-    /* justify-content: center; */
     padding: 50px 50px;
 }
 
-.edit_journal_select_item {
+
+.edit_journal_select_item, .edit_journal_delete_item, .edit_journal_to_mark, .edit_journal_del_mark {
     border: 2px solid silver;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -368,7 +362,7 @@ form div i.fas + #enter_role {
     align-items: center;
 }
 
-.edit_journal_select_item a {
+.edit_journal_select_item a, .edit_journal_delete_item a, .edit_journal_to_mark a, .edit_journal_del_mark a {
     width: 150px;
     height: 40px;
     border-radius: 50px;
@@ -405,13 +399,12 @@ form div i.fas + #enter_role {
     color: #fff;
 }
 
-.edit_journal_select_item a:hover {
+.edit_journal_select_item a:hover, .edit_journal_delete_item a:hover, .edit_journal_to_mark a:hover, .edit_journal_del_mark a:hover {
     background: #34495e;
     color: #fff;
 }
 
-#add_form{
-    /* border: 1px solid #000; */
+#add_form, #add_form_delete{
     padding-bottom: 10px;
 }
 
@@ -439,7 +432,6 @@ form div i.fas + #enter_role {
     border-radius: 50px;
     border: none;
     font-weight: bold;
-    /* font-size: 1em; */
     transition: .2s linear;
     margin-top: 30px;
     background: #E6E6E6;
@@ -462,17 +454,15 @@ form div i.fas + #enter_role {
     margin-bottom: 10px;
 }
 
-#add_form_add_task, #add_form_edit_task {
+#add_form_add_task, #add_form_edit_task, #add_form_delete_task, #add_form_to_rate, #add_form_del_rate, #add_form_del_task {
     padding: 10px 15px;
-    /* display: flex;
-    flex-direction: column; */
 }
 
-#add_form_add_task input, #add_form_edit_task input{
+#add_form_add_task input, #add_form_edit_task input, #add_form_delete_task input, #add_form_to_rate input, #add_form_del_rate input, #add_form_del_task input {
     display: block;
 }
 
-#add_form_add_task input[type=submit], #add_form_edit_task input[type=submit]{
+#add_form_add_task input[type=submit], #add_form_edit_task input[type=submit], #add_form_delete_task input[type=submit], #add_form_to_rate input[type=submit], #add_form_del_rate input[type=submit], #add_form_del_task input[type=submit] {
     width: 150px;
     height: 50px;
     border-radius: 50px;
@@ -484,22 +474,26 @@ form div i.fas + #enter_role {
     margin-bottom: 30px;
 }
 
-#add_form_add_task input[type=submit]:focus, #add_form_edit_task input[type=submit]:focus{
+#add_form_add_task input[type=submit]:focus, #add_form_edit_task input[type=submit]:focus, #add_form_delete_task input[type=submit]:focus, #add_form_to_rate input[type=submit]:focus, #add_form_del_rate input[type=submit]:focus, #add_form_del_task input[type=submit]:focus {
     outline: none;
 }
 
-#add_form_add_task input[type=submit]:hover, #add_form_edit_task input[type=submit]:hover{
+#add_form_add_task input[type=submit]:hover, #add_form_edit_task input[type=submit]:hover, #add_form_delete_task input[type=submit]:hover, #add_form_to_rate input[type=submit]:hover, #add_form_del_rate input[type=submit]:hover, #add_form_del_task input[type=submit]:hover {
     background: #34495e;
     color: #fff;
 }
 
-#add_form_add_task p, #add_form_edit_task p {
+#add_form_add_task p, #add_form_edit_task p, #add_form_delete_task p, #add_form_to_rate p, #add_form_del_rate p, #add_form_del_task p {
     font-size: 1em;
     font-weight: bold;
     margin-left: 20px;
 }
 
-#add_form_edit_task select {
+input[type=file]{
+    margin-bottom: 20px;
+}
+
+#add_form_edit_task select, #add_form_delete_task select, #add_form_delete select, #add_form_to_rate select, #add_form_del_rate select, #add_form_del_task select, #add_form_add_task select {
     width: 290px;
     height: 60px;
     background: #E6E6E6;
@@ -511,13 +505,362 @@ form div i.fas + #enter_role {
     appearance: none;
     font-weight: bold;
 }
+#add_form_delete select {
+    height: 40px;
+}
 
-#add_form_edit_task select:focus {
+.compSelect{
+    position: absolute;
+}
+
+#chooseComp {
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    transition: .2s linear;
+    background: #E6E6E6;
+}
+
+#add_form_edit_task select:focus, #add_form_delete_task select:focus, #add_form_delete select:focus, #add_form_to_rate select:focus, #add_form_del_rate select:focus, #add_form_del_task select:focus, #add_form_add_task select:focus {
     outline: none;
     box-shadow: 0px 0px 15px 0px rgba(52, 73, 94,1.0);
 }
 
+.task_area {
+    border: 2px solid silver;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: serif;
+    font-size: 1em;
+}
 
+.student_data_tr{
+    display: flex;
+}
+
+.student_data_td{
+    height: 50px;
+    width: 100% + 20px;
+    font-weight: bold;
+}
+
+.task_item_table{
+    display: flex;
+    justify-content: center;
+}
+
+/* Cost optimization */
+.opt_main_block{
+    min-height: 200px;
+    margin: 10vh auto;
+    background: #fff;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 10px;
+    transition: .3s linear;
+    padding: 50px 50px;
+    width:fit-content;
+}
+
+
+tr {
+    display: flex;
+}
+
+td {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .1s linear;
+}
+
+.label_select {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;    
+    text-align: center;
+    justify-content: center;
+}
+
+.optimization_select_item{
+    border: 2px solid silver;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .1s linear;
+}
+
+.optimization_select_item label:hover{
+    color: #34495e;
+}
+
+#sub_counter {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    height: 50px;
+    width: 250px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.enter_opt {
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: .2s linear;
+    margin-top: 30px;
+    background: #E6E6E6;
+    position: fixed;
+    top: 80px;
+    right: 30px;
+}
+
+.enter_comp{
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: .2s linear;
+    margin-top: 30px;
+    background: #E6E6E6;
+    position: fixed;
+    top: 0;
+    right: 30px;
+}
+
+.enter_opt:hover{
+    background: #34495e;
+    color: #fff;
+}
+
+.enter_comp:hover{
+    background: #34495e;
+    color: #fff;
+}
+
+.studentCompsBtns{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.editStudentComps {
+    width: 300px;
+    padding: 10px 20px;
+    background: #34495e;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.editStudentComps:hover {
+    background: #2c3e50;
+
+}
+
+.enter_opt_table{
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: .2s linear;
+    background: #E6E6E6;
+}
+
+.enter_opt_table:hover{
+    background: #34495e;
+    color: #fff;
+}
+
+.table_inp {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    text-align: center;
+    font-size: 1.1em;
+    transition: .2s;
+}
+
+.table_inp:focus {
+    outline: none;
+    background: #dbdbdb;
+    border: 2px solid #dbdbdb;
+}
+
+.journal_st_name{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.opt_result {
+    min-height: 200px;
+    width: 600px;
+    background: grey;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    line-height: 25px;
+    padding: 15px 0;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px;
+}
+.close_result{
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+
+/* ANR */
+
+
+.anr_form label {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.anr_form input[type=number] {
+    width: 250px;
+    height: 40px;
+    background: #E6E6E6;
+    border: none;
+    border-radius: 50px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    transition: .3s linear;
+    font-weight: bold;
+    margin: 0;
+    margin: 0 20px;
+}
+
+.anr_form input[type=number]:focus {
+    outline: none;
+    box-shadow: 0px 0px 15px 0px rgba(52, 73, 94,1.0);
+}
+
+.anr_form input[type=submit], .anr_form2 input[type=submit], .accountinf_subm {
+    width: 250px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: .2s linear;
+    background: #E6E6E6;
+    margin-bottom: 30px;
+}
+
+.anr_form input[type=submit]:hover, .anr_form2 input[type=submit]:hover, .accountinf_subm:hover {
+    background: #34495e;
+    color: #fff;
+}
+
+.table_block{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.anr_result{
+    background: grey;
+    padding: 10px 20px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Accounting */
+
+.acc_select {
+    height: 100%;;
+    width: 100%;
+    border: none;
+    font-size: 1em;
+    text-align: center;
+    transition: .2s;
+}
+
+.acc_select:focus {
+    background: #1abc9c;
+}
+
+option {
+    background: #fff;
+}
+
+.tab_data_w{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.tab_data_w input[type=number]{
+    box-sizing: border-box;
+    width: 60%;
+    height: 30%;
+    margin-top: 5px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 2px solid #000;
+    outline: none;
+    transition: .2s;
+    padding: 5px;
+}
+
+.tab_data_w input[type=number]:focus{
+    background: #e5e5e5;
+}
+
+.add_comp_btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 10px;
+    background: #34495e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.add_comp_btn:hover {
+    background: #f39c12;
+    color: #000;
+}
 
 
 
@@ -578,12 +921,6 @@ form div i.fas + #enter_role {
         height: 50%;
     }
 }
-
-/* @media (min-height: 1200px) {
-    #logo {
-        height: 40%;
-    }
-} */
 
 @media (min-height: 1200px) {
     #logo {

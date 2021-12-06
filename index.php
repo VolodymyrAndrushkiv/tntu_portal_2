@@ -78,6 +78,7 @@ ob_clean();
 
     registration($connection);
     login($connection)
+
     ?>
 
     
